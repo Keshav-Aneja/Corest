@@ -10,6 +10,40 @@
     <script defer src="script.js"></script>
   </head>
   <body>
+    <div class="login" id="loginPage">
+      <div class="middle">
+        <section>
+          <img src="Assets/Corest-white.png" alt="" />
+          <h1 class="text-white">Login Account</h1>
+          <!-- <input type="text" name="" id="username" placeholder="Username" /> -->
+          <!-- <input type="password" name="" id="password" placeholder="Password" /> -->
+          <!-- <button class="loginBtn">Login</button> -->
+          <form class="data" enctype="text/plain">
+            <input
+              type="text"
+              name="YourName "
+              required
+              placeholder="Username"
+              id="usname"
+            />
+            <input
+              type="password"
+              name="Password"
+              required
+              placeholder="Password"
+            />
+            <input
+              type="button"
+              value="Login"
+              id="button"
+              class="loginBtn"
+              onclick="getValue()"
+            />
+          </form>
+        </section>
+        <aside><img src="Assets/Cover-login.png" alt="" /></aside>
+      </div>
+    </div>
     <div class="hero">
       <nav class="br-lg display-f p-1">
         <img src="Assets/Corest-white.png" alt="" id="logo" class="pl-1" />
@@ -29,6 +63,7 @@
             >
           </li>
         </ul>
+        <span class="text-white" id="name"></span>
         <img src="Assets/man.png" alt="" id="profile" />
       </nav>
       <div class="main">

@@ -64,7 +64,7 @@ h1 {
 }
 
 nav {
-  z-index: 1000;
+  z-index: 1100;
   width: 80%;
   justify-content: space-between;
   min-height: 50px;
@@ -87,6 +87,14 @@ nav li {
 }
 nav #profile {
   width: 40px;
+}
+nav span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav span span {
+  margin-right: 1rem;
 }
 
 .main {
@@ -294,26 +302,30 @@ nav #profile {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .info-card {
-  width: 25.33%;
-  height: 77vh;
+  position: relative;
+  width: 26.33%;
+  height: 67vh;
   border-radius: 30px;
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border: 2px solid #185fbc;
+  box-shadow: 8px 8px 0px #185fbc;
   margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
 }
 .info-card .upper {
   width: 100%;
-  height: 30%;
+  height: 18%;
   background-color: #34a075;
-  background-image: url(/Assets/info-card.avif);
+  background-image: url(/Assets/Scholar-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  border-bottom: 2px solid grey;
 }
 .info-card .lower h3 {
   font-weight: 500;
@@ -332,6 +344,154 @@ nav #profile {
   font-size: 1.25rem;
   margin-left: 1rem;
   font-weight: 500;
+  font-family: "Chivo Mono";
+  position: absolute;
+  bottom: 10px;
+}
+
+.login {
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #185fbc, #3b87d4);
+  display: flex;
+  align-items: center;
+}
+
+.middle {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.middle section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.middle section img {
+  width: 80%;
+}
+.middle section h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.middle section input {
+  width: 75%;
+  height: 50px;
+  border: 0px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  font-size: 1.25rem;
+}
+.middle section input:focus {
+  border: 2px solid #185fbc;
+}
+.middle section #button {
+  text-align: center;
+  width: 75%;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #185fbc;
+  letter-spacing: 1px;
+}
+.middle section form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.middle aside {
+  width: 50%;
+}
+.middle aside img {
+  width: 100%;
+}
+
+.row-2 {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.left-comm {
+  border-radius: 30px;
+  width: 23%;
+  height: 40%;
+  background-color: #3b87d4;
+  box-shadow: 7px 7px 0px #185fbc;
+}
+.left-comm .top-banner {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  width: 100%;
+  height: 20%;
+  background-color: #250842;
+  background-image: url(/Assets/dotted-bg.png);
+  background-size: cover;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.left-comm .top-banner img {
+  position: absolute;
+  width: 60px;
+  bottom: -30px;
+  left: 35%;
+}
+.left-comm h3 {
+  text-align: center;
+  color: #eeefef;
+}
+.left-comm p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #eeefef;
+}
+.left-comm button {
+  border-radius: 0px;
+  width: 100%;
+  color: white;
+  font-family: "Chivo Mono";
+}
+
+.center-comm {
+  width: 60%;
+  height: 100%;
+  background-color: #3b87d4;
+  overflow-y: scroll;
+  border-radius: 30px;
+  border: 2px solid #185fbc;
+}
+
+.right-comm {
+  width: 27%;
+  height: 50%;
+  background-color: #185fbc;
+  border-radius: 30px;
+}
+.right-comm h3 {
+  text-align: center;
+  color: #eeefef;
+  letter-spacing: 1px;
+}
+.right-comm button {
+  border-radius: 0px;
+  width: 100%;
+  height: 60px;
+  color: white;
   font-family: "Chivo Mono";
 }
 
@@ -355,8 +515,16 @@ nav #profile {
   padding-top: 3rem;
 }
 
+.mt-1 {
+  margin-top: 0.75rem;
+}
+
 .mt-4 {
   margin-top: 4.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-2 {

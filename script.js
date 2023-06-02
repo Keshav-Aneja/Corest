@@ -27,3 +27,12 @@ for (let i = 0; i < 4; i++) {
     desc[i].classList.add("desc");
   });
 }
+const name = document.querySelector("#usname");
+const holder = document.querySelector("#name");
+const loginPage = document.querySelector("#loginPage");
+const loginBtn = document.querySelector(".loginBtn");
+loginBtn.addEventListener("click", function () {
+  console.log("click");
+  loginPage.style.display = "none";
+  holder.textContent = name.value;
+});
