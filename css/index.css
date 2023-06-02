@@ -16,6 +16,10 @@
   color: rgb(225, 196, 4);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +64,7 @@ h1 {
 }
 
 nav {
+  z-index: 1000;
   width: 80%;
   justify-content: space-between;
   min-height: 50px;
@@ -138,11 +143,97 @@ nav #profile {
   justify-content: space-between;
 }
 .features .components .card {
+  width: 23%;
+  transition: 0.5s;
+}
+.features .components .card:hover {
+  filter: drop-shadow(2px 2px 10px rgba(10, 10, 0, 0.7));
+  transition: 0.5s;
+}
+.features .components span {
+  width: 23%;
+  text-align: justify;
+}
+.features .components .desc {
+  width: 23%;
+  opacity: 0;
+}
+
+.resources {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 150vh;
+  background-image: url(/Assets/Resources-Bg.png);
+  background-size: cover;
+}
+.resources h1 {
+  font-size: 3rem;
+  padding-top: 9.5rem;
+}
+
+.card-container {
+  margin-top: 10rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resource-card {
   width: 25%;
+  height: 50vh;
+  background-color: #34a075;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.4);
+  transition: 1s;
+}
+.resource-card .top {
+  width: 100%;
+  height: 50%;
+}
+.resource-card .top img {
+  width: 100%;
+  height: 100%;
+}
+.resource-card .bottom {
+  width: 100%;
+  height: 50%;
+}
+.resource-card .bottom h2 {
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.resource-card .bottom button {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.resource-card:hover {
+  transform: scale(115%, 115%);
+  transition: 1s;
+}
+
+.head-left-pro {
+  filter: blur(10px);
+  transform: translateX(-100%);
+  opacity: 0.5;
+  transition: 2s;
+}
+
+.head-left-pro:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.head-left-pro:nth-child(3) {
+  transition-delay: 300ms;
 }
 
 .p-1 {
   padding: 0.75rem;
+}
+
+.p-2 {
+  padding: 1.5rem;
 }
 
 .p-3 {
@@ -155,6 +246,14 @@ nav #profile {
 
 .pt-3 {
   padding-top: 3rem;
+}
+
+.mt-4 {
+  margin-top: 4.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1.5rem;
 }
 
 .br {
@@ -180,4 +279,17 @@ nav #profile {
 }
 .btn-secondary:hover {
   background-color: #5094d9;
+}
+
+.btn-primary {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  background-color: #185fbc;
+}
+.btn-primary:hover {
+  background-color: #1b6ad3;
 }
