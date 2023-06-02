@@ -6,10 +6,9 @@
 body {
   font-family: "Poppins";
   height: 100vh;
-  background-image: linear-gradient(to top, #1d1d1d, $purple);
   background-repeat: no-repeat;
   overflow-x: hidden;
-  overflow-y: hidden;
+  // overflow-y: hidden;
 }
 
 ul {
@@ -18,9 +17,108 @@ ul {
 
 a {
   text-decoration: none;
-  color: $secondary;
+  color: $white;
 }
 
 h1 {
   color: $primary;
+}
+.hero {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+.column {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  width: 80%;
+  justify-content: space-between;
+  min-height: 50px;
+  margin: 0 auto;
+  background-color: $glass;
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  #logo {
+    width: 150px;
+  }
+  ul {
+    gap: 50px;
+  }
+  li {
+    font-size: $font-size-avg;
+  }
+  #profile {
+    width: 40px;
+  }
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary;
+  background-image: url(/Assets/Background-Main-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    font-size: $font-size-xxxl;
+    line-height: 95px;
+  }
+  .container {
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      width: 50%;
+      p {
+        font-size: 1.5rem;
+      }
+      button {
+        margin-top: 40px;
+        font-size: $font-size-avg;
+        font-weight: 700;
+        font-family: "Chivo Mono";
+        letter-spacing: 2px;
+        border: 2px solid $white;
+      }
+    }
+    .right {
+      width: 50%;
+      // height: 100%;s
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.features {
+  width: 100vw;
+  min-height: 70vh;
+  background-image: url(/Assets/Background-features-2.png);
+  background-repeat: no-repeat;
+  background-blend-mode: color-burn;
+  background-size: cover;
+  h1 {
+    font-size: $font-size-xxl;
+  }
+  .components {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .card {
+      width: 25%;
+    }
+  }
 }

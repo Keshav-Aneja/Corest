@@ -2,7 +2,7 @@ $primary: #185fbc;
 $secondary: #3b87d4;
 $white: #eeefef;
 $tertiary: #018852;
-$glass: rgba(54, 22, 62, 0.8);
+$glass: rgba(9, 12, 21, 0.769);
 $purple: #250842;
 $colors: (
   "secondary": #3b87d4,
@@ -12,6 +12,7 @@ $colors: (
   "grey": #6d6b82,
   "purple": #250842,
   "black": #252525,
+  "yellow": rgb(225, 196, 4),
   "glass": rgba(54, 22, 62, 0.8),
 );
 
@@ -25,6 +26,7 @@ $base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 
 $base-font-size: 1rem;
 $font-size-sm: $base-font-size * 0.75;
+$font-size-avg: $base-font-size * 1.25;
 $font-size-large: $base-font-size * 1.5;
 $font-size-xl: $base-font-size * 2;
 $font-size-xxl: $base-font-size * 3;
