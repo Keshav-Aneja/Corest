@@ -93,7 +93,7 @@ nav #profile {
   width: 100vw;
   height: 100vh;
   background-color: #185fbc;
-  background-image: url(/Assets/Background-Main-3.png);
+  background-image: url(Assets/Background-Main-3.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -129,7 +129,7 @@ nav #profile {
 .features {
   width: 100vw;
   min-height: 70vh;
-  background-image: url(/Assets/Background-features-2.png);
+  background-image: url(Assets/Background-features-2.png);
   background-repeat: no-repeat;
   background-blend-mode: color-burn;
   background-size: cover;
@@ -163,7 +163,7 @@ nav #profile {
   width: 100%;
   margin: 0 auto;
   min-height: 150vh;
-  background-image: url(/Assets/Resources-Bg.png);
+  background-image: url(Assets/Resources-Bg.png);
   background-size: cover;
 }
 .resources h1 {
