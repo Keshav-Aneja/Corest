@@ -74,7 +74,7 @@ nav {
   width: 100vw;
   height: 100vh;
   background-color: $primary;
-  background-image: url(Assets/Background-Main-3.png);
+  background-image: url(/Assets/Background-Main-3.png);
   background-repeat: no-repeat;
   background-size: cover;
   h1 {
@@ -110,7 +110,7 @@ nav {
 .features {
   width: 100vw;
   min-height: 70vh;
-  background-image: url(Assets/Background-features-2.png);
+  background-image: url(/Assets/Background-features-2.png);
   background-repeat: no-repeat;
   background-blend-mode: color-burn;
   background-size: cover;
@@ -143,7 +143,7 @@ nav {
   width: 100%;
   margin: 0 auto;
   min-height: 150vh;
-  background-image: url(Assets/Resources-Bg.png);
+  background-image: url(/Assets/Resources-Bg.png);
   background-size: cover;
   // border: 3px solid $secondary;
   h1 {
@@ -211,4 +211,115 @@ nav {
   opacity: 1;
   filter: blur(0px);
   transform: translateX(0%);
+}
+.banner {
+  position: relative;
+
+  top: 10rem;
+  width: 75%;
+  margin: 0 auto;
+  height: 250px;
+  background-color: $primary;
+  background-image: url(/Assets/dotted-bg2.png);
+  background-size: contain;
+  // background-repeat: no-repeat;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+  }
+  h1 {
+    position: relative;
+    top: 45px;
+    text-align: center;
+    font-size: $font-size-xxxl;
+  }
+  #rocket {
+    z-index: 1000;
+    position: absolute;
+    left: -140px;
+    top: 20px;
+    width: 300px;
+  }
+  .filters {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 80%;
+    height: 100px;
+    background-color: $secondary;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 100px;
+    select {
+      width: 200px;
+      height: 50%;
+      text-align: center;
+      font-size: $font-size-avg;
+      font-family: "Poppins";
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 30px;
+      border: 1px solid white;
+      background-color: $tertiary;
+      color: white;
+    }
+  }
+}
+.filler {
+  width: 100%;
+  height: 250px;
+}
+.content-main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.info-card {
+  width: 25.33%;
+  height: 77vh;
+  border-radius: 30px;
+  background-color: white;
+  // border: 2px solid $primary;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 5rem;
+  .upper {
+    width: 100%;
+    height: 30%;
+    background-color: $tertiary;
+    background-image: url(/Assets/info-card.avif);
+    background-size: cover;
+    // background-position: -50px -30px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom: 2px solid grey;
+  }
+  .lower {
+    h3 {
+      font-weight: 500;
+      color: $primary;
+    }
+    hr {
+      color: grey;
+      background-color: grey;
+    }
+    ul {
+      li {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+      }
+    }
+    button {
+      width: 90%;
+      font-size: $font-size-avg;
+      margin-left: 1rem;
+      font-weight: 500;
+      font-family: "Chivo Mono";
+    }
+  }
 }
