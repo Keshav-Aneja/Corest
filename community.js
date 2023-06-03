@@ -16,7 +16,7 @@ function createPost() {
 
   // Create the username paragraph element
   const usernameParagraph = document.createElement("p");
-  usernameParagraph.textContent = "Aditya Joshi";
+  usernameParagraph.textContent = "Keshav Aneja";
   infoDiv.appendChild(usernameParagraph);
 
   // Append the info div to the post section
@@ -55,6 +55,7 @@ function createPost() {
   const unfavouriteImage = document.createElement("img");
   unfavouriteImage.src = "Assets/unfavourite.png";
   unfavouriteImage.alt = "";
+  unfavouriteImage.className = "like";
   controlsDiv.appendChild(unfavouriteImage);
 
   // Create the chat image element
@@ -84,11 +85,14 @@ postDesc.addEventListener("change", function () {
 const postBtn = document.getElementById("post");
 postBtn.addEventListener("click", function () {
   createPost();
+  closePlayer();
 });
 
+const man = document.getElementById("man");
 const inpFile = document.getElementById("inpFile");
 const previewImage = document.getElementById("previewImage");
 const imageSection = document.getElementById("imageSection");
+const textUpload = document.querySelector(".text-upload");
 let newPostSrc;
 inpFile.addEventListener("change", (e) => {
   const file = e.target.files[0];
@@ -106,3 +110,52 @@ inpFile.addEventListener("change", (e) => {
 
   reader.readAsDataURL(file);
 });
+//Functionality to enlarge the post section
+let isOpen = false;
+// let open = document.getElementById("openUp");
+const screen = document.querySelector(".post-method");
+const openPlayer = function () {
+  screen.classList.toggle("overlay-player");
+  screen.style.width = "60vw";
+  screen.style.height = "70vh";
+  screen.style.borderRadius = "50px";
+  man.style.display = "none";
+  postDesc.style.width = "90%";
+  postDesc.style.height = "40%";
+  textUpload.style.display = "inline-block";
+  postBtn.style.width = "50%";
+
+  //   postDesc.widt;
+  isOpen = true;
+};
+const closePlayer = function () {
+  screen.classList.toggle("overlay-player");
+  screen.style.width = "100%";
+  screen.style.height = "120px";
+  postDesc.style.width = "55%";
+  postDesc.style.height = "50px";
+  man.style.display = "inherit";
+  textUpload.style.display = "none";
+  postBtn.style.width = "";
+  postDesc.value = "";
+  isOpen = false;
+};
+
+postDesc.addEventListener("click", function () {
+  if (!isOpen) {
+    openPlayer();
+  }
+});
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && isOpen) {
+    closePlayer();
+  }
+});
+
+const like = document.querySelectorAll(".like");
+for (let i = 0; i < like.length; i++) {
+  like[i].addEventListener("click", function () {
+    like[i].src = "Assets/favourite.png";
+    like[i].style.filter = "invert(0)";
+  });
+}

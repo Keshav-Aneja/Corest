@@ -477,6 +477,8 @@ nav span span {
   width: 100%;
   height: 120px;
   background-color: #34a075;
+  background-image: url(/Assets/Background-Main-2.png);
+  background-size: cover;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -484,13 +486,18 @@ nav span span {
 .center-comm .post-method img {
   width: 50px;
 }
-.center-comm .post-method input {
+.center-comm .post-method #post-desc {
   width: 55%;
   height: 50px;
   border-radius: 30px;
   border: 0px;
-  padding-left: 2rem;
+  padding: 1rem;
   font-size: 1.25rem;
+  resize: none;
+}
+.center-comm .post-method span {
+  display: none;
+  font-size: 1.5rem;
 }
 .center-comm .post-method #upload-img {
   width: 40px;

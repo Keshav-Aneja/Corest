@@ -21,7 +21,11 @@
             >Scholarships</a
           >
         </li>
-        <li><a href="#" class="text-hover-primary-light-3">Community</a></li>
+        <li>
+          <a href="community.html" class="text-hover-primary-light-3"
+            >Community</a
+          >
+        </li>
         <li>
           <a href="#resources" class="text-hover-primary-light-3">Resources</a>
         </li>
@@ -42,20 +46,22 @@
       </div>
       <div class="center-comm">
         <div class="post-method">
-          <img src="Assets/man.png" alt="" />
-          <input
+          <img src="Assets/man.png" alt="" id="man" />
+          <!-- <input
             type="text"
             name=""
             id="post-desc"
             placeholder="Start a Post"
-          />
-
-          <label for="inpFile" class="custom-file-upload">
-            <img src="Assets/gallery.png" alt="" id="upload-img"
-          /></label>
-          <input type="file" id="inpFile" />
-
-          <button class="btn-primary" id="post">Post</button>
+          /> -->
+          <textarea name="" id="post-desc"></textarea>
+          <section>
+            <span class="text-white text-upload">Upload An Image</span>
+            <label for="inpFile" class="custom-file-upload">
+              <img src="Assets/gallery.png" alt="" id="upload-img"
+            /></label>
+            <input type="file" id="inpFile" />
+          </section>
+          <button class="btn-secondary" id="post">Post</button>
         </div>
         <br />
         <div class="heroine">
@@ -82,7 +88,7 @@
               <img src="Assets/post-thumb-1.png" alt="" id="imgPost" />
             </div>
             <div class="controls">
-              <img src="Assets/unfavourite.png" alt="" />
+              <img src="Assets/unfavourite.png" alt="" class="like" />
               <img src="Assets/chat.png" alt="" />
               <img src="Assets/share.png" alt="" />
             </div>
@@ -110,7 +116,7 @@
               <img src="Assets/post-thumb-2.png" alt="" />
             </div>
             <div class="controls">
-              <img src="Assets/unfavourite.png" alt="" />
+              <img src="Assets/unfavourite.png" alt="" class="like" />
               <img src="Assets/chat.png" alt="" />
               <img src="Assets/share.png" alt="" />
             </div>
@@ -138,7 +144,7 @@
               <img src="Assets/post-thumg-3.png" alt="" />
             </div>
             <div class="controls">
-              <img src="Assets/unfavourite.png" alt="" />
+              <img src="Assets/unfavourite.png" alt="" class="like" />
               <img src="Assets/chat.png" alt="" />
               <img src="Assets/share.png" alt="" />
             </div>
