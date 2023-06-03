@@ -454,13 +454,45 @@ nav {
 }
 .center-comm {
   width: 60%;
-  height: 100%;
-  background-color: $secondary;
+  height: 120%;
+  // background-color: $white;
   overflow-y: scroll;
   border-radius: 30px;
-  border: 2px solid $primary;
+  // border: 2px solid $primary;
+
+  .post-method {
+    width: 100%;
+    height: 120px;
+    background-color: $tertiary;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      width: 50px;
+    }
+    input {
+      width: 55%;
+      height: 50px;
+      border-radius: 30px;
+      border: 0px;
+      padding-left: 2rem;
+      font-size: $font-size-avg;
+    }
+    #upload-img {
+      width: 40px;
+      filter: invert(1);
+    }
+    button {
+      padding: 1.5rem;
+      color: $white;
+      font-size: $font-size-avg;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+  }
 }
 .right-comm {
+  box-shadow: 7px 7px 0px $secondary;
   width: 27%;
   height: 50%;
   background-color: $primary;
@@ -476,5 +508,71 @@ nav {
     height: 60px;
     color: white;
     font-family: "Chivo Mono";
+    text-align: left;
   }
+}
+.post {
+  border-radius: 30px;
+  width: 100%;
+  height: 80vh;
+  background-color: $primary;
+  margin-bottom: 2rem;
+  .info {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: $white;
+    font-weight: 600;
+    font-size: $font-size-avg;
+    letter-spacing: 2px;
+    background-color: $secondary;
+    img {
+      height: 100%;
+    }
+  }
+  .description {
+    width: 100%;
+    height: 34%;
+    p {
+      color: $white;
+    }
+  }
+  .image {
+    width: 100%;
+    height: 50%;
+    background-color: $purple;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .hashtags {
+    color: rgb(20, 188, 234);
+  }
+  .controls {
+    width: 100%;
+    height: 6%;
+    background-color: $tertiary;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      height: 60%;
+      cursor: pointer;
+      filter: invert(1);
+    }
+  }
+}
+.center-comm::-webkit-scrollbar {
+  display: none;
+}
+.center-comm {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

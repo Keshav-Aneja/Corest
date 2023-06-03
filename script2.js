@@ -127,6 +127,106 @@ let Sports = [
     source: "https://www.abft.in/steam-scholarship",
   },
 ];
+let GraduationStudies = [
+  {
+    name: "Central Sector Scheme of Scholarships for College and University Students",
+    Description:
+      " A scholarship program by the Ministry of Education, Government of India, for meritorious students pursuing undergraduate studies.",
+    Benefits:
+      " Financial assistance towards tuition fees, maintenance allowance, and other incidental expenses.",
+    Eligibility:
+      " Based on the candidate's performance in Class 12 board examinations. ",
+    source: "https://scholarships.gov.in/",
+  },
+  {
+    name: "Ishan Uday Special Scholarship Scheme:",
+    Description:
+      "A scholarship program by the University Grants Commission (UGC) to support economically disadvantaged students from Northeastern states for pursuing general degree courses..",
+    Benefits:
+      " Financial assistance towards tuition fees, books, and other expenses. ",
+    Eligibility:
+      "Open to students from the Northeastern states pursuing undergraduate studies.",
+    source: "",
+  },
+  {
+    name: "Prime Minister's Scholarship Scheme for Central Armed Police Forces and Assam Rifles",
+    Description:
+      " A scholarship program by the Ministry of Home Affairs for the wards of Central Armed Police Forces and Assam Rifles personnel.",
+    Benefits:
+      "Financial assistance towards tuition fees and maintenance allowance. ",
+    Eligibility:
+      "Open to the wards of CAPF and Assam Rifles personnel pursuing professional degree courses.",
+    source: "https://scholarships.gov.in/",
+  },
+  {
+    name: "Sitaram Jindal Foundation Scholarship:",
+    Description:
+      "A scholarship program by the Sitaram Jindal Foundation to support meritorious and economically disadvantaged students pursuing undergraduate studies.",
+    Benefits:
+      " Financial assistance towards tuition fees, books, and other educational expenses. ",
+    Eligibility: "  Based on academic merit and financial need.",
+    source: "https://www.sitaramjindalfoundation.org/",
+  },
+  {
+    name: "Sitaram Jindal Foundation Scholarship:",
+    Description:
+      "A scholarship program by the Sitaram Jindal Foundation to support meritorious and economically disadvantaged students pursuing undergraduate studies.",
+    Benefits:
+      " Financial assistance towards tuition fees, books, and other educational expenses. ",
+    Eligibility: "  Based on academic merit and financial need.",
+    source: "https://www.sitaramjindalfoundation.org/",
+  },
+];
+let Disab = [
+  {
+    name: "National Handicapped Finance and Development Corporation (NHFDC) Scholarships: ",
+    Description:
+      " NHFDC offers various scholarships to students with disabilities to support their education.",
+    Benefits: " Financial assistance, book grants, and other allowances",
+    Eligibility:
+      "Open to students with disabilities pursuing school education, professional courses, or higher education. ",
+    source: "https://www.nhfdc.nic.in/scholarship",
+  },
+  {
+    name: "Department of Empowerment of Persons with Disabilities Scholarships: ",
+    Description:
+      "The Department offers scholarships to students with disabilities to promote their education and skill development. ",
+    Benefits: "Financial assistance for education and skill training.  ",
+    Eligibility:
+      "Open to students with disabilities pursuing various levels of education. ",
+    source: "https://disabilityaffairs.gov.in/content/page/scholarship.php",
+  },
+  {
+    name: "Scholarships for Visually Impaired Students: ",
+    Description:
+      "Organizations like the National Association for the Blind (NAB) and various state-level bodies provide scholarships for visually impaired students. ",
+    Benefits:
+      "  Financial assistance, braille books, specialized equipment, and support services.",
+    Eligibility:
+      "Open to visually impaired students pursuing education at various levels. ",
+    source: "",
+  },
+  {
+    name: "Scholarships for Hearing Impaired Students:",
+    Description:
+      "Organizations like the Ali Yavar Jung National Institute of Speech and Hearing Disabilities (AYJNIHH) and other bodies provide scholarships for hearing impaired students. ",
+    Benefits:
+      "Financial assistance, hearing aids, assistive devices, and support services.  ",
+    Eligibility:
+      " Open to hearing impaired students pursuing education at various levels. ",
+    source: "",
+  },
+  {
+    name: "Scholarships for Orthopedically Impaired Students: ",
+    Description:
+      "Various organizations, including NGOs and corporate foundations, provide scholarships for orthopedically impaired students. ",
+    Benefits:
+      "Financial assistance, mobility aids, medical support, and other disability-related needs. ",
+    Eligibility:
+      "Open to hearing impaired students pursuing education at various levels. ",
+    source: "",
+  },
+];
 const menu = document.getElementById("opts");
 document.addEventListener("change", function () {
   const selectedValue = menu.value;
@@ -137,6 +237,12 @@ document.addEventListener("change", function () {
   } else if (selectedValue === "sport") {
     deleteAllCards();
     create(Sports);
+  } else if (selectedValue === "ug") {
+    deleteAllCards();
+    create(GraduationStudies);
+  } else if (selectedValue === "disab") {
+    deleteAllCards();
+    create(Disab);
   }
 });
 function deleteAllCards() {
