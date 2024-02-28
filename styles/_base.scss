@@ -288,6 +288,11 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media (max-width: 600px) {
+  .info-card {
+    width: 100%;
+  }
+}
 .info-card {
   position: relative;
   width: 26.33%;

@@ -1,0 +1,88 @@
+@media (max-width: 600px) {
+  nav {
+    width: 90vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav #profile {
+    display: none;
+  }
+  nav #name {
+    display: none;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
+  nav ul {
+    gap: 15px;
+  }
+  .banner h1 {
+    font-size: 2rem;
+  }
+  .banner {
+    width: 100%;
+    height: 150px;
+  }
+  .filters {
+    height: 20px;
+  }
+  .filters h2 {
+    font-size: 0.7rem;
+  }
+  #rocket {
+    display: none;
+  }
+  select {
+    /* width: 100px; */
+    font-size: 1rem;
+  }
+  #opts {
+    width: 50%;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+  @media (max-width: 600px) {
+    .info-card {
+      width: 100%;
+    }
+  }
+  .row-2 {
+    width: 90%;
+  }
+  .left-comm {
+    display: none;
+  }
+  .right-comm {
+    display: none;
+  }
+  .center-comm {
+    width: 100%;
+    height: 100vh;
+  }
+  #man {
+    display: none;
+  }
+  #post {
+    padding: 0.6rem;
+    padding-left: 0.8rem;
+    font-size: 1rem;
+  }
+  .post {
+    height: 70vh;
+  }
+  .description {
+    font-size: 0.8rem;
+    padding: 1rem;
+    height: 44%;
+  }
+  .image {
+    height: 40%;
+  }
+  .imageUploader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>COREST</title>
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="community.css" />
     <script defer src="community.js"></script>
+    <link rel="stylesheet" href="community.css" />
+    <link rel="stylesheet" href="responsive.css" />
   </head>
   <body>
+    <div class="overlay hidden"></div>
     <nav class="br-lg display-f p-1">
       <img src="Assets/Corest-white.png" alt="" id="logo" class="pl-1" />
       <ul class="text-white display-f row">
@@ -54,7 +56,7 @@
             placeholder="Start a Post"
           /> -->
           <textarea name="" id="post-desc"></textarea>
-          <section>
+          <section class="imageUploader">
             <span class="text-white text-upload">Upload An Image</span>
             <label for="inpFile" class="custom-file-upload">
               <img src="Assets/gallery.png" alt="" id="upload-img"
@@ -152,21 +154,31 @@
         </div>
       </div>
       <div class="right-comm">
-        <br />
-        <h3>Upcoming Events</h3>
-        <button class="btn-primary">
-          Design-a-Thon: Unleash Your Creative Genius!
-        </button>
-        <button class="btn-primary">
-          The Great Essay Challenge: Inspire, Persuade, Enlighten
-        </button>
-        <button class="btn-primary">
-          Innovation Sprint: Pushing Boundaries, Transforming Possibilities
-        </button>
-        <button class="btn-primary">Ideathon: From Ideas to Action</button>
-        <button class="btn-primary">
-          Ignite: Fueling Ideas for a Better Tomorrow
-        </button>
+        <div class="upper-container">
+          <br />
+          <h3>Upcoming Events</h3>
+          <button class="btn-primary">
+            Design-a-Thon: Unleash Your Creative Genius!
+          </button>
+          <button class="btn-primary">
+            The Great Essay Challenge: Inspire, Persuade, Enlighten
+          </button>
+          <button class="btn-primary">
+            Innovation Sprint: Pushing Boundaries, Transforming Possibilities
+          </button>
+          <button class="btn-primary">Ideathon: From Ideas to Action</button>
+          <button class="btn-primary">
+            Ignite: Fueling Ideas for a Better Tomorrow
+          </button>
+        </div>
+        <div class="bottom-container">
+          <p>Chat Bot</p>
+          <div class="box">
+            <div class="chat-box"></div>
+            <input type="text" name="" id="text-box" />
+            <button class="btn-chat btn-secondary">Submit</button>
+          </div>
+        </div>
       </div>
     </div>
   </body>

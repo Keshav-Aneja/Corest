@@ -115,8 +115,14 @@ let isOpen = false;
 // let open = document.getElementById("openUp");
 const screen = document.querySelector(".post-method");
 const openPlayer = function () {
+  // console.log(window.innerWidth );
   screen.classList.toggle("overlay-player");
-  screen.style.width = "60vw";
+  document.querySelector(".overlay").classList.toggle("hidden");
+  if (window.innerWidth > 600) {
+    screen.style.width = "60vw";
+  } else {
+    screen.style.width = "80vw";
+  }
   screen.style.height = "70vh";
   screen.style.borderRadius = "50px";
   man.style.display = "none";
@@ -124,12 +130,12 @@ const openPlayer = function () {
   postDesc.style.height = "40%";
   textUpload.style.display = "inline-block";
   postBtn.style.width = "50%";
-
   //   postDesc.widt;
   isOpen = true;
 };
 const closePlayer = function () {
   screen.classList.toggle("overlay-player");
+  document.querySelector(".overlay").classList.toggle("hidden");
   screen.style.width = "100%";
   screen.style.height = "120px";
   postDesc.style.width = "55%";
@@ -158,4 +164,36 @@ for (let i = 0; i < like.length; i++) {
     like[i].src = "Assets/favourite.png";
     like[i].style.filter = "invert(0)";
   });
+}
+const textBox = document.getElementById("text-box");
+const btn = document.querySelector(".btn-chat");
+btn.addEventListener("click", async () => {
+  const text = textBox.value;
+  console.log(text);
+  const content = await getOpenAIResponse(text);
+  const textrep = document.createElement("p");
+  textrep.textContent = content;
+  const chatbox = document.querySelector(".chat-box");
+  chatbox.appendChild(textrep);
+});
+async function getOpenAIResponse(text) {
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: ``,
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [
+        {
+          role: "user",
+          content: text,
+        },
+      ],
+    }),
+  });
+
+  const data = await response.json();
+  return data.choices[0].message.content;
 }
